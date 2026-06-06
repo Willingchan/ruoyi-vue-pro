@@ -209,3 +209,8 @@ justauth:
     type: REDIS
     prefix: 'social_auth_state:' # 缓存前缀，目前只对 Redis 缓存生效，默认 JUSTAUTH::STATE::
     timeout: 24h # 超时时长，目前只对 Redis 缓存生效，默认 3 分钟
+--- #################### Agent 代理与工具配置 ####################
+agent:
+  service-url: "http://127.0.0.1:8000" # Python Agent 的基础 URL
+  service-api-key: "demo-api-key"      # 调用 Python 时的鉴权 Key
+  tools-secret: "demo-tools-secret"    # 允许 Python 调用的鉴权 Key
