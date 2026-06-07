@@ -271,6 +271,8 @@ yudao:
       - ${management.endpoints.web.base-path}/** # 不处理 Actuator 的请求
   security:
     permit-all_urls:
+      - /admin-api/agent/tools/** # 放行 Agent 工具接口，由 AgentSecurityInterceptor 自行鉴权
+
       - /admin-api/mp/open/** # 微信公众号开放平台，微信回调接口，不需要登录
   api-encrypt:
     enable: true # 是否开启 API 加密
